@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
         while (true) {
-            System.out.println("GCログが入っている場所を指定してください。 ");
+            System.out.println("GCログの場所を入力してください。 ");
             String logfile = new Scanner(System.in).nextLine();
             BufferedReader stream = new BufferedReader(new InputStreamReader(new FileInputStream(new File(logfile))));
 

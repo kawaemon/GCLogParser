@@ -50,7 +50,7 @@ public class Main {
             System.out.println("合計停止時間    = " + total_stop_time.toString() + " sec");
             System.out.println("最長停止時間    = " + biggest.toString() + " sec");
             System.out.println("平均停止時間    = " + total_stop_time.divide(new BigDecimal(processed_lines), RoundingMode.HALF_UP) + "sec");
-you
+
             System.out.println("GC停止回数     = " + stop_times);
 
             System.out.println("###############");

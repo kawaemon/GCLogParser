@@ -14,6 +14,7 @@ public class Main {
             String line = "";
             boolean isG1GC = false;
             int processed_lines = 0;
+            int stop_times = 0;
             BigDecimal total_stop_time = new BigDecimal("0.0");
             BigDecimal totaltime = new BigDecimal("0.0");
             BigDecimal biggest = new BigDecimal("0.0");
@@ -38,6 +39,7 @@ public class Main {
                 }
 
                 ++processed_lines;
+                if (isStopTome) ++stop_times;
             }
 
             stream.close();
@@ -48,7 +50,9 @@ public class Main {
             System.out.println("合計停止時間    = " + total_stop_time.toString() + " sec");
             System.out.println("最長停止時間    = " + biggest.toString() + " sec");
             System.out.println("平均停止時間    = " + total_stop_time.divide(new BigDecimal(processed_lines), RoundingMode.HALF_UP) + "sec");
-            System.out.println("停止回数       = " + processed_lines);
+you
+            System.out.println("GC停止回数     = " + stop_times);
+
             System.out.println("###############");
             System.out.println();
             System.out.println("CTRL+Cで停止します。");

@@ -39,7 +39,7 @@ public class Main {
                 }
 
                 ++processed_lines;
-                if (isStopTome) ++stop_times;
+                if (isStopTime) ++stop_times;
             }
 
             stream.close();
